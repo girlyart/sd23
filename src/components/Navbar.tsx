@@ -71,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
             <div className="flex flex-col">
               <span className="text-xl sm:text-2xl font-extrabold tracking-wider text-white uppercase font-serif-title leading-tight">
-                SEKOLAH
+                SMP 6 JEMBER
               </span>
               <span className="text-[10px] sm:text-[11px] font-semibold tracking-[0.22em] text-blue-200/90 uppercase -mt-0.5">
                 SENIOR HIGH SCHOOL
