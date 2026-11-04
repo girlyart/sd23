@@ -181,27 +181,27 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
             </div>
           </div>
 
-          {/* Right Card: Interactive Inquiry Form */}
-          <div className="lg:col-span-7 bg-[#edf4fd]/70 p-6 sm:p-8 rounded-xl border border-blue-100 shadow-sm">
-            <div className="flex items-center gap-2 mb-2">
-              <MessageSquare className="w-5 h-5 text-blue-600" />
-              <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-serif-title uppercase">
+          {/* Right Card: Interactive Inquiry Form (Blue Container with White Text) */}
+          <div className="lg:col-span-7 bg-gradient-to-b from-[#183668] to-[#102447] text-white p-6 sm:p-8 rounded-xl border border-blue-400/30 shadow-lg">
+            <div className="flex items-center gap-2.5 mb-2">
+              <MessageSquare className="w-5 h-5 text-amber-400" />
+              <h3 className="text-lg sm:text-xl font-bold text-white font-serif-title uppercase tracking-wide">
                 {lang === 'id' ? 'Formulir Kirim Pesan' : 'Send an Inquiry'}
               </h3>
             </div>
-            <p className="text-xs sm:text-sm text-slate-500 mb-6">
+            <p className="text-xs sm:text-sm text-blue-100/90 mb-6">
               {lang === 'id'
                 ? 'Tuliskan pesan atau pertanyaan Anda di bawah ini. Tim kami akan merespons secepat mungkin.'
                 : 'Fill out this form and our support desk will respond to your inquiry shortly.'}
             </p>
 
             {isSubmitted ? (
-              <div className="p-6 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-3 animate-in fade-in">
-                <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
-                <h4 className="font-bold text-base text-emerald-900">
+              <div className="p-6 bg-white/10 border border-emerald-400/40 rounded-xl text-center space-y-3 animate-in fade-in">
+                <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
+                <h4 className="font-bold text-base text-white">
                   {lang === 'id' ? 'Pesan Berhasil Terkirim!' : 'Message Sent Successfully!'}
                 </h4>
-                <p className="text-xs sm:text-sm text-emerald-700 max-w-md mx-auto">
+                <p className="text-xs sm:text-sm text-blue-100 max-w-md mx-auto">
                   {lang === 'id'
                     ? 'Terima kasih atas pesan Anda. Tim administrasi kami akan segera menghubungi Anda kembali.'
                     : 'Thank you for contacting us. Our staff will respond via your provided contact details.'}
@@ -209,7 +209,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                 <button
                   type="button"
                   onClick={() => setIsSubmitted(false)}
-                  className="mt-3 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition-colors"
+                  className="mt-3 px-5 py-2.5 bg-white hover:bg-blue-50 text-blue-900 rounded-lg text-xs font-bold transition-colors shadow"
                 >
                   {lang === 'id' ? 'Kirim Pesan Lain' : 'Send Another Message'}
                 </button>
@@ -218,7 +218,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">
+                    <label className="block text-xs font-bold text-white uppercase tracking-wide mb-1.5">
                       {lang === 'id' ? 'Nama Lengkap *' : 'Full Name *'}
                     </label>
                     <input
@@ -227,12 +227,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                       placeholder={lang === 'id' ? 'Contoh: Budi Pratama' : 'e.g. John Doe'}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-600 transition-colors"
+                      className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-white/10 text-white placeholder:text-blue-200/60 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">
+                    <label className="block text-xs font-bold text-white uppercase tracking-wide mb-1.5">
                       {lang === 'id' ? 'No. WhatsApp / Email *' : 'WhatsApp / Email *'}
                     </label>
                     <input
@@ -241,40 +241,40 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                       placeholder={lang === 'id' ? '0812xxxx atau email@anda.com' : 'Phone or email address'}
                       value={formData.contactInfo}
                       onChange={(e) => setFormData({ ...formData, contactInfo: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-600 transition-colors"
+                      className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-white/10 text-white placeholder:text-blue-200/60 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">
+                  <label className="block text-xs font-bold text-white uppercase tracking-wide mb-1.5">
                     {lang === 'id' ? 'Kategori Pertanyaan' : 'Inquiry Category'}
                   </label>
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-600 transition-colors text-slate-700"
+                    className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-[#122b56] text-white border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 transition-colors"
                   >
-                    <option value="ppdb">
+                    <option value="ppdb" className="bg-[#102447] text-white">
                       {lang === 'id' ? 'Pendaftaran Siswa Baru (PPDB 2026/2027)' : 'Admissions & Enrollment'}
                     </option>
-                    <option value="tour">
+                    <option value="tour" className="bg-[#102447] text-white">
                       {lang === 'id' ? 'Jadwal Kunjungan & Tur Kampus' : 'Campus Tour & Visit'}
                     </option>
-                    <option value="academic">
+                    <option value="academic" className="bg-[#102447] text-white">
                       {lang === 'id' ? 'Kurikulum & Program Unggulan' : 'Curriculum & Programs'}
                     </option>
-                    <option value="admin">
+                    <option value="admin" className="bg-[#102447] text-white">
                       {lang === 'id' ? 'Administrasi, Nilai & Surat Keterangan' : 'Administrative Documents'}
                     </option>
-                    <option value="other">
+                    <option value="other" className="bg-[#102447] text-white">
                       {lang === 'id' ? 'Lain-lain / Kemitraan' : 'General / Partnership'}
                     </option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">
+                  <label className="block text-xs font-bold text-white uppercase tracking-wide mb-1.5">
                     {lang === 'id' ? 'Isi Pesan / Pertanyaan *' : 'Message / Details *'}
                   </label>
                   <textarea
@@ -287,16 +287,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                     }
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-600 transition-colors resize-none"
+                    className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-white/10 text-white placeholder:text-blue-200/60 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-md hover:shadow transition-all inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="w-full sm:w-auto px-7 py-3 bg-white hover:bg-blue-50 text-[#142952] font-black text-xs uppercase tracking-wider rounded-lg shadow-md hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                 >
-                  <Send className="w-3.5 h-3.5" />
+                  <Send className="w-3.5 h-3.5 text-blue-700" />
                   <span>
                     {isSubmitting
                       ? lang === 'id'
