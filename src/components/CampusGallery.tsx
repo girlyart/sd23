@@ -25,7 +25,7 @@ export const CampusGallery: React.FC<CampusGalleryProps> = ({ lang }) => {
     : GALLERY_ITEMS.filter(item => item.category === selectedCategory);
 
   return (
-    <section id="gallery" className="py-20 bg-white text-slate-900 border-b border-slate-200">
+    <section id="gallery" className="py-20 bg-[#edf4fd] text-slate-900 border-b border-blue-100/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs sm:text-sm font-bold tracking-widest text-slate-400 uppercase">
@@ -42,7 +42,7 @@ export const CampusGallery: React.FC<CampusGalleryProps> = ({ lang }) => {
         </div>
 
         {/* Filter Bar */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#edf4fd] border border-blue-100 rounded-lg max-w-2xl mx-auto">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-2 p-1.5 bg-white border border-blue-100 rounded-lg max-w-2xl mx-auto shadow-sm">
           {categories.map((cat) => (
             <button
               key={cat.id}

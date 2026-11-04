@@ -37,6 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'events', label: lang === 'id' ? 'KEGIATAN' : 'EVENTS', href: '#events' },
     { id: 'gallery', label: lang === 'id' ? 'GALERI' : 'GALLERY', href: '#gallery' },
     { id: 'teachers', label: lang === 'id' ? 'GURU' : 'TEACHERS', href: '#teachers' },
+    { id: 'contact', label: lang === 'id' ? 'KONTAK' : 'CONTACT', href: '#contact' },
   ];
 
   const handleNavClick = (href: string) => {

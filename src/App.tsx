@@ -6,8 +6,8 @@ import { CoreValues } from './components/CoreValues';
 import { CallToActionBanner } from './components/CallToActionBanner';
 import { AcademicCalendar } from './components/AcademicCalendar';
 import { TeachersDirectory } from './components/TeachersDirectory';
-import { ClassroomStories } from './components/ClassroomStories';
 import { CampusGallery } from './components/CampusGallery';
+import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { VirtualTourModal } from './components/VirtualTourModal';
 import { AdmissionsModal } from './components/AdmissionsModal';
@@ -87,11 +87,11 @@ export default function App() {
           onSelectTeacher={(teacher) => setSelectedTeacherForContact(teacher)}
         />
 
-        {/* Classroom Stories & Student Achievements */}
-        <ClassroomStories lang={lang} />
-
         {/* Campus Photo Gallery */}
         <CampusGallery lang={lang} />
+
+        {/* Contact & Inquiry Section */}
+        <ContactSection lang={lang} />
       </main>
 
       {/* Institutional Footer */}

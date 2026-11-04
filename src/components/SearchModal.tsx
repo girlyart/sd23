@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { EVENTS_DATA, TEACHERS_DATA, STORIES_DATA, CAMPUS_LOCATIONS } from '../data/schoolData';
+import { EVENTS_DATA, TEACHERS_DATA, CAMPUS_LOCATIONS } from '../data/schoolData';
 import { Language } from '../types';
-import { Search, X, Calendar, User, BookOpen, MapPin, ArrowRight } from 'lucide-react';
+import { Search, X, Calendar, User, MapPin, ArrowRight } from 'lucide-react';
 
 interface SearchModalProps {
   lang: Language;
@@ -19,7 +19,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
   const [query, setQuery] = useState('');
 
   const results = useMemo(() => {
-    if (!query.trim()) return { events: [], teachers: [], stories: [], locations: [] };
+    if (!query.trim()) return { events: [], teachers: [], locations: [] };
     const q = query.toLowerCase();
 
     return {
@@ -35,11 +35,6 @@ export const SearchModal: React.FC<SearchModalProps> = ({
         t.bio.toLowerCase().includes(q) ||
         t.degrees.toLowerCase().includes(q)
       ),
-      stories: STORIES_DATA.filter(s =>
-        s.title.toLowerCase().includes(q) ||
-        s.titleEn.toLowerCase().includes(q) ||
-        s.snippet.toLowerCase().includes(q)
-      ),
       locations: CAMPUS_LOCATIONS.filter(l =>
         l.name.toLowerCase().includes(q) ||
         l.nameEn.toLowerCase().includes(q) ||
@@ -50,7 +45,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
 
   if (!isOpen) return null;
 
-  const totalResults = results.events.length + results.teachers.length + results.stories.length + results.locations.length;
+  const totalResults = results.events.length + results.teachers.length + results.locations.length;
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200">
@@ -165,38 +160,6 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                           </p>
                           <p className="text-[11px] text-slate-400 mt-0.5">
                             {lang === 'id' ? t.role : t.roleEn} · {t.degrees}
-                          </p>
-                        </div>
-                        <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-700 transition-colors" />
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Stories Results */}
-              {results.stories.length > 0 && (
-                <div>
-                  <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-2 flex items-center gap-1.5">
-                    <BookOpen className="w-3.5 h-3.5 text-amber-600" />
-                    <span>{lang === 'id' ? 'Cerita Kelas & Prestasi' : 'Stories'} ({results.stories.length})</span>
-                  </h4>
-                  <div className="divide-y divide-slate-100">
-                    {results.stories.map((s) => (
-                      <button
-                        key={s.id}
-                        onClick={() => {
-                          onClose();
-                          onNavigateSection('stories');
-                        }}
-                        className="w-full text-left py-2.5 px-3 rounded hover:bg-slate-50 transition-colors flex items-center justify-between group"
-                      >
-                        <div>
-                          <p className="text-xs font-bold text-slate-900 group-hover:text-blue-800">
-                            {lang === 'id' ? s.title : s.titleEn}
-                          </p>
-                          <p className="text-[11px] text-slate-400 mt-0.5">
-                            {s.date} · {s.author}
                           </p>
                         </div>
                         <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-700 transition-colors" />

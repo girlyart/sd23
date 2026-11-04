@@ -70,13 +70,20 @@ export const Footer: React.FC<FooterProps> = ({
               {lang === 'id' ? 'Navigasi' : 'Quick Links'}
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              {['about', 'academics', 'events', 'gallery', 'teachers'].map((id) => (
-                <li key={id}>
+              {[
+                { id: 'about', label: lang === 'id' ? 'Tentang Kami' : 'About' },
+                { id: 'academics', label: lang === 'id' ? 'Akademik' : 'Academics' },
+                { id: 'events', label: lang === 'id' ? 'Kegiatan & Agenda' : 'Events' },
+                { id: 'gallery', label: lang === 'id' ? 'Galeri Foto' : 'Gallery' },
+                { id: 'teachers', label: lang === 'id' ? 'Direktori Guru' : 'Teachers' },
+                { id: 'contact', label: lang === 'id' ? 'Kontak & Lokasi' : 'Contact Us' }
+              ].map((item) => (
+                <li key={item.id}>
                   <button
-                    onClick={() => onNavigateSection(id)}
+                    onClick={() => onNavigateSection(item.id)}
                     className="hover:text-amber-400 transition-colors uppercase tracking-wide cursor-pointer"
                   >
-                    {id}
+                    {item.label}
                   </button>
                 </li>
               ))}
@@ -155,7 +162,7 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Bottom Disclaimer & Copyright */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            © {new Date().getFullYear()} SEKOLAH SENIOR HIGH SCHOOL. All rights reserved.
+            © {new Date().getFullYear()} {SCHOOL_INFO.fullName}. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-slate-400 text-xs">
             <span>Privasi</span>
