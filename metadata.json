@@ -1,0 +1,6 @@
+{
+  "name": "Sekolah - Senior High School Portal",
+  "description": "Website resmi Sekolah Senior High School dengan informasi akademik, jadwal pelajaran, profil pengajar, kalender kegiatan, dan tur virtual sekolah.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
