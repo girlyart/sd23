@@ -11,7 +11,7 @@ export const ClassroomStories: React.FC<ClassroomStoriesProps> = ({ lang }) => {
   const [activeStory, setActiveStory] = useState<Story | null>(null);
 
   return (
-    <section id="stories" className="py-20 bg-slate-50 text-slate-900 border-b border-slate-200">
+    <section id="stories" className="py-20 bg-[#edf4fd] text-slate-900 border-b border-blue-100/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs sm:text-sm font-bold tracking-widest text-slate-400 uppercase">
@@ -31,7 +31,7 @@ export const ClassroomStories: React.FC<ClassroomStoriesProps> = ({ lang }) => {
           {STORIES_DATA.map((story) => (
             <article
               key={story.id}
-              className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col justify-between group"
+              className="bg-white rounded-xl border border-blue-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group"
             >
               <div>
                 <div className="relative h-48 overflow-hidden bg-slate-100">

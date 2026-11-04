@@ -41,7 +41,7 @@ export const TeachersDirectory: React.FC<TeachersDirectoryProps> = ({ lang, onSe
         </div>
 
         {/* Department Filters */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-2 p-1.5 bg-slate-100 rounded-lg max-w-2xl mx-auto">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#edf4fd] border border-blue-100 rounded-lg max-w-2xl mx-auto">
           {departments.map((dept) => (
             <button
               key={dept.id}

@@ -25,7 +25,7 @@ export const AcademicCalendar: React.FC<AcademicCalendarProps> = ({ lang, onSele
     : EVENTS_DATA.filter(evt => evt.category === selectedCategory);
 
   return (
-    <section id="events" className="py-20 bg-white text-slate-900 border-b border-slate-200">
+    <section id="events" className="py-20 bg-[#edf4fd] text-slate-900 border-b border-blue-100/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header matching reference */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -65,7 +65,7 @@ export const AcademicCalendar: React.FC<AcademicCalendarProps> = ({ lang, onSele
         </div>
 
         {/* Filter Bar with Segmented Buttons */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-2 p-1.5 bg-slate-100 rounded-lg max-w-3xl mx-auto">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-2 p-1.5 bg-white/95 border border-blue-100 shadow-xs rounded-lg max-w-3xl mx-auto">
           {categories.map((cat) => (
             <button
               key={cat.id}
@@ -73,7 +73,7 @@ export const AcademicCalendar: React.FC<AcademicCalendarProps> = ({ lang, onSele
               className={`px-3.5 py-2 text-xs font-bold rounded-md transition-all cursor-pointer whitespace-nowrap ${
                 selectedCategory === cat.id
                   ? 'bg-blue-800 text-white shadow-sm'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
               }`}
             >
               {lang === 'id' ? cat.labelId : cat.labelEn}
@@ -86,7 +86,7 @@ export const AcademicCalendar: React.FC<AcademicCalendarProps> = ({ lang, onSele
           {filteredEvents.map((event) => (
             <div
               key={event.id}
-              className="bg-white rounded-xl border border-slate-200 hover:border-blue-400 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden group"
+              className="bg-white rounded-xl border border-blue-100 hover:border-blue-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group"
             >
               {/* Event Image Banner with Overlay & Badges */}
               <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
@@ -147,7 +147,7 @@ export const AcademicCalendar: React.FC<AcademicCalendarProps> = ({ lang, onSele
               </div>
 
               {/* Card Footer with Blue CTA */}
-              <div className="px-5 sm:px-6 py-3.5 bg-slate-50 border-t border-slate-100 flex items-center justify-between mt-auto">
+              <div className="px-5 sm:px-6 py-3.5 bg-blue-50/40 border-t border-blue-100/70 flex items-center justify-between mt-auto">
                 <div className="text-xs font-semibold text-slate-500">
                   {event.seatsAvailable ? (
                     <span className="text-emerald-700 font-bold">{event.seatsAvailable} {lang === 'id' ? 'kursi tersedia' : 'seats open'}</span>

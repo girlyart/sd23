@@ -78,7 +78,7 @@ export const CoreValues: React.FC<CoreValuesProps> = ({ lang }) => {
   ];
 
   return (
-    <section id="academics" className="py-20 bg-slate-50 border-b border-slate-200/80">
+    <section id="academics" className="py-20 bg-white border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Section Header */}
         <div className="max-w-3xl mx-auto space-y-4">
@@ -97,7 +97,7 @@ export const CoreValues: React.FC<CoreValuesProps> = ({ lang }) => {
           {pillars.map((pillar) => (
             <div
               key={pillar.id}
-              className="bg-white p-8 rounded-xl border border-slate-200/70 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center text-center space-y-4"
+              className="bg-[#f8faff] hover:bg-white p-8 rounded-xl border border-blue-100 hover:border-blue-300 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col items-center text-center space-y-4"
             >
               <div className="p-3 rounded-full bg-blue-50/80 hover:bg-blue-100/60 transition-colors">
                 {pillar.icon}

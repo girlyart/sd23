@@ -10,7 +10,7 @@ interface HeadmasterTalkProps {
 
 export const HeadmasterTalk: React.FC<HeadmasterTalkProps> = ({ lang, onOpenAdmissions }) => {
   return (
-    <section id="about" className="py-16 sm:py-24 bg-white text-slate-900 border-b border-slate-100">
+    <section id="about" className="py-16 sm:py-24 bg-[#edf4fd] text-slate-900 border-b border-blue-100/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Grandmaster Talk Text & Signature */}
@@ -139,7 +139,7 @@ export const HeadmasterTalk: React.FC<HeadmasterTalkProps> = ({ lang, onOpenAdmi
             </div>
 
             {/* School Stats Strip */}
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 bg-slate-50 border border-slate-200/80 rounded-lg">
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 bg-white border border-blue-200/70 rounded-xl shadow-xs">
               {SCHOOL_INFO.stats.map((stat, idx) => (
                 <div key={idx} className="text-center">
                   <div className="text-lg sm:text-xl font-extrabold text-blue-900 tabular-nums">
