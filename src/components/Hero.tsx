@@ -53,7 +53,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenTour, onNavigateSection 
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight uppercase font-serif-title drop-shadow-md">
-              WELCOME TO <span className="text-amber-400">SMP 6 JEMBER</span>
+              WELCOME TO <span className="text-amber-400">SMP NEGERI JEMBER</span>
             </h1>
 
             <div className="max-w-2xl mx-auto lg:mx-0">

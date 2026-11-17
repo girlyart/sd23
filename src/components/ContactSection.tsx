@@ -116,7 +116,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                         {SCHOOL_INFO.phone} (Kantor Pusat)
                       </a>
                       <a
-                        href="https://wa.me/6281234567890?text=Halo%20SMP%206%20Jember,%20saya%20ingin%20bertanya%20informasi"
+                        href="https://wa.me/6281234567890?text=Halo%20SMP%20Negeri%20Jember,%20saya%20ingin%20bertanya%20informasi"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-emerald-700 font-semibold hover:underline"
@@ -170,7 +170,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                 </p>
               </div>
               <a
-                href="https://wa.me/6281234567890?text=Halo%20SMP%206%20Jember,%20mohon%20info%20terbaru"
+                href="https://wa.me/6281234567890?text=Halo%20SMP%20Negeri%20Jember,%20mohon%20info%20terbaru"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow transition-colors flex items-center gap-1.5 shrink-0"

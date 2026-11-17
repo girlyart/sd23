@@ -1,14 +1,14 @@
 import { SchoolEvent, DaySchedule, Teacher, Story, GalleryItem, CampusLocation } from '../types';
 
 export const SCHOOL_INFO = {
-  name: 'SMP 6 JEMBER',
-  fullName: 'SMP NEGERI 6 JEMBER',
+  name: 'SMP NEGERI JEMBER',
+  fullName: 'SMP NEGERI JEMBER',
   motto: 'Excellence in Academics, Character, and Global Leadership',
   accreditation: 'Akreditasi A Unggul · Sekolah Rujukan & Berprestasi · Jawa Timur',
   founded: '1979',
   address: 'Jl. Bengawan Solo No. 1, Kaliwates, Jember, Jawa Timur, 68121',
   phone: '+62 331 487234',
-  email: 'info@smpn6jember.sch.id',
+  email: 'info@smpnegerijember.sch.id',
   principal: {
     name: 'Katherine Gonzalez, M.Ed., Ph.D.',
     role: 'Sekolah Grandmaster / Head of School',
